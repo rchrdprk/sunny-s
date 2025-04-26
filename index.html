@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Sunny's</title>
+</head>
+<body>
+
+<!-- NAVIGATION BAR -->
+    <header id="header">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.svg" alt="Sunny's" width="150" height="80">
+            </div>
+            <button id="open-sidebar" class="hamburger" onclick="openSidebar()">
+                <img src="burger_menu.svg" style="width: 30px; height: 30px;">
+            </button>
+
+            <nav id="nav-items-container">
+                <ul class="nav-items" id="nav-items">
+                    <li>
+                        <button id="close-sidebar" class="exit-hamburger" onclick="closeSidebar()">
+                            X
+                        </button>
+                    </li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#time">HOURS</a></li>
+                    <li><a href="#location">LOCATION</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!-- NAVIGATION BAR -->
+
+    <div id="overlay"></div>
+
+    <section>
+        <div class="main-image">
+            <img src="images/placeholder.png">
+        </div>
+    </section>
+
+    <section>
+        <div id="about" class="about">
+            
+            <div class="about-par-container">
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage</p>
+            </div>
+            <div class="about-image">
+                <img src="images/placeholder2.png">
+            </div>
+        
+        </div>
+    </section>
+
+    <section>
+        <div class="menu-container">
+
+            <div id="menu" class="menu" >
+                <h1 class="menu-heading">MENU</h1>
+                <ul class="menu-types">
+                    <li>
+                        <a id="menu-breakfast" column-count=1>BREAKFAST</a>
+                    </li>
+                    <li>
+                        <a id="menu-tacos" column-count=1>TACOS</a>
+                    </li>
+                    <li>
+                        <a id="menu-kids" column-count=1>KIDS' MENU</a>
+                    </li>
+                    <li>
+                        <a id="menu-beverages" column-count=1>BEVERAGES</a>
+                    </li>
+                    <li>
+                        <a id="menu-alcohol" column-count=1>ALCOHOL</a>
+                    </li>
+                </ul>
+            </div>              
+
+            <div class="menu-content" id="menu-content">
+                <div id="breakfast" class="menu-section active">
+                    
+                </div>
+                <div id="tacos" class="menu-section">
+                </div>
+                <div id="kids" class="menu-section">
+                </div>
+                <div id="beverages" class="menu-section">
+                </div>
+                <div id="alcohol" class="menu-section" >
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="image-section">
+            <img src="images/placeholder2.png">
+            <img src="images/placeholder2.png">
+        </div>
+    </section>
+
+    <section>
+         <div id="time" class="time">
+            <h2>Hours</h2>
+            <ul class="hours">
+                <li>Sunday: 11am - 2pm</li>
+                <li>Monday: 11am - 2pm</li>
+                <li>Tuesday: 11am - 2pm</li>
+                <li>Wednesday: 11am - 2pm</li>
+                <li>Thursday: 11am - 2pm</li>
+                <li>Friday: 11am - 2pm</li>
+                <li>Saturday: 11am - 2pm</li>
+              </ul>
+         </div>
+    </section>
+
+    <section>
+        <div id="location" class="location">
+            <div class="map">
+                <div id="map" style="height: 400px; width: 100%;"></div>
+                <img id="customMarker" src="map_marker.png" style="display: none;" />
+            </div>
+        </div>
+    </section>
+
+
+
+    
+    <section>
+        <div id="contact" class="contact">
+
+        </div>
+    </section>
+
+    <div id="footer" class="footer">
+        
+    </div>
+
+</body>
+</html>
