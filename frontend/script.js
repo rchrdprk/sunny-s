@@ -49,8 +49,6 @@ document.querySelectorAll('.menu-types a').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault(); 
 
-        this.style.backgroundColor = '#F58220';
-        this.style.color = '#FDD24F';
 
         const menuType = this.id.replace('menu-', '');
 
@@ -69,15 +67,11 @@ function displayMenu(type) {
     if (target) {
       target.classList.add('active');
     }
-
-
 }
-
 
 let prevScrollTop = 0;
 const header = document.getElementById("header");
 const headerHeight = header.offsetHeight;
-
 
 window.addEventListener("scroll", () => {
     const scrollTop = window.scrollY || document.documentElement.scrollTop; 
@@ -105,9 +99,6 @@ window.addEventListener("scroll", () => {
         } // avoid negative values
 
     }
-
-   
- 
   });
 
   document.querySelectorAll('#header .nav-items li a').forEach(link => {
