@@ -54,8 +54,8 @@
     ],
     "quesadilla": [
       {
-        "name": "Grilled Cheese",
-        "description": "red pepper. purple onion, black bean & comes with coleslaw",
+        "name": "Quesadilla",
+        "description": "red pepper, purple onions, black beans, cheese (comes with coleslaw)",
         "price": "15.95",
         "extra_info": ""
       }

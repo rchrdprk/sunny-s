@@ -27,11 +27,11 @@
                             X
                         </button>
                     </li>
+                    <li><a href="#about">ABOUT</a></li>
                     <li><a href="#menu">MENU</a></li>
                     <li><a href="#time">HOURS</a></li>
-                    <li><a href="#location">LOCATION</a></li>
-                    <li><a href="#about">ABOUT</a></li>
                     <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#location">LOCATION</a></li>
                 </ul>
             </nav>
         </div>
@@ -48,9 +48,8 @@
 
     <section>
         <div id="about" class="about">
-            
             <div class="about-par-container">
-                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage</p>
+                <p>Insert restaurant description (about section) here. preferably 3-5 sentences minimum to fill the gap</p>
             </div>
             <div class="about-image">
                 <img src="images/placeholder2.png">
@@ -72,6 +71,9 @@
                         <a id="menu-tacos" column-count=1>TACOS</a>
                     </li>
                     <li>
+                        <a id="menu-quesadilla" column-count=1>QUESADILLA</a>
+                    </li>
+                    <li>
                         <a id="menu-kids" column-count=1>KIDS' MENU</a>
                     </li>
                     <li>
@@ -85,9 +87,10 @@
 
             <div class="menu-content" id="menu-content">
                 <div id="breakfast" class="menu-section active">
-                    
                 </div>
-                <div id="tacos" class="menu-section">
+                <div id="tacos" class="menu-section" desc="Single $12 / Two $20">
+                </div>
+                <div id="quesadilla" class="menu-section" desc="Add any taco protein $6">
                 </div>
                 <div id="kids" class="menu-section">
                 </div>
@@ -109,36 +112,51 @@
 
     <section>
          <div id="time" class="time">
-            <h2>Hours</h2>
+            <h1 class="time-heading">HOURS</h1>
             <ul class="hours">
-                <li>Sunday: 11am - 2pm</li>
-                <li>Monday: 11am - 2pm</li>
-                <li>Tuesday: 11am - 2pm</li>
-                <li>Wednesday: 11am - 2pm</li>
-                <li>Thursday: 11am - 2pm</li>
-                <li>Friday: 11am - 2pm</li>
-                <li>Saturday: 11am - 2pm</li>
+                <li>Sunday: CLOSED</li>
+                <li>Monday: 10:30 AM - 4:00 PM</li>
+                <li>Tuesday: 10:30 AM - 4:00 PM</li>
+                <li>Wednesday: 10:30 AM - 4:00 PM</li>
+                <li>Thursday: 10:30 AM - 4:00 PM</li>
+                <li>Friday: 10:30 AM - 4:00 PM</li>
+                <li>Saturday: CLOSED</li>
               </ul>
          </div>
     </section>
 
     <section>
+        <div id="contact" class="contact">
+           <!-- <h3><a href="tel:+">add-phone-number</a></h3>  -->
+           <h3><a>add-phone-number</a></h3> 
+        </div>
+    </section>
+
+    <section>
         <div id="location" class="location">
+            <div class="address">
+                <div class="address-container">
+                    <h1>LOCATION</h1>
+                    <p>221 W 2nd Ave, Qualicum Beach</p>
+                </div>
+            </div>
             <div class="map">
                 <div id="map" style="height: 400px; width: 100%;"></div>
                 <img id="customMarker" src="map_marker.png" style="display: none;" />
             </div>
+            <div class="map-buttons">
+                <ul>
+                    <li>
+                        <a href="https://maps.app.goo.gl/mMikwApiZDXP4M7d9" target="_blank" rel="noopener noreferrer">OPEN GOOGLE MAPS</a>
+                    </li>
+                    <li>
+                        <a href="http://maps.apple.com/?q=221+W+2nd+Ave,+Qualicum+Beach" target="_blank" rel="noopener noreferrer">OPEN APPLE MAPS</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
-
-
-    
-    <section>
-        <div id="contact" class="contact">
-
-        </div>
-    </section>
 
     <div id="footer" class="footer">
         

@@ -26,7 +26,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    transition: top 0.3s ease-in-out;
+    transition: top 0.2s ease-in-out;
 }
 
 ul {
@@ -43,7 +43,7 @@ ul {
     background-color: #FDD24F;
     font-weight: 700;
     font-size: 1rem;
-
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .logo {
@@ -175,8 +175,20 @@ ul {
 
 .menu-section.active {
     display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column; 
+    align-items: center;
+}
+
+.menu-section-description {
+    padding: 0 0 3rem 0;
+}
+
+.menu-section-container {
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    width: 100%;
 }
 
 .menu-item {
@@ -232,17 +244,24 @@ ul {
     justify-content: center;
     align-items: center;
     padding: 1.875rem 0;
+}
 
-    /* background-color: #F58220; */
-
+.time-heading {
+    padding: 1rem 0 1.5rem 0;
+    font-size: 2rem;
 }
 
 .hours {
     text-align:center;
+    font-size: 1rem;
+}
+
+.hours li {
+    padding: 0.5rem;
 }
 
 .map {
-    padding:2rem 0 2rem 0;
+    padding:0 0 3.5rem 0;
     /* background-color: #FFFFCC; */
 }
 
@@ -251,14 +270,69 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3.75rem 0;
+    padding: 1.875rem 0;
+    font-size: 1rem;
 }
 
+.contact a{
+    color: black;
+}
+
+.contact a:hover{
+    color: #F58220;
+}
+
+.location {
+    padding: 1.875rem 0 1.875rem 0;
+}
+
+.address {
+    display: flex;
+    justify-content: center;
+    padding: 1.875rem 0 1.875rem 0;
+}
+
+.address-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.address-container p{
+    padding: 2rem;
+}
+
+.map-buttons ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.map-buttons li{
+    padding: 0 0.625rem 2.5rem 0.625rem;
+    font-weight: 800;
+    font-size: 0.95rem
+}
+
+.map-buttons li a{
+    cursor: pointer;
+    padding: 0.5rem;
+    border: 0.1rem solid black;
+    color: black;
+
+    transition: all 0.2s ease;
+}
+
+.map-buttons li a:hover{
+    /* border: 0.1rem solid #F58220; */
+    background-color: #F58220;
+    color: #FDD24F;
+}
 
 .footer {
-    background-color: #222;
+    background-color: #F58220;
     color: #fff;
-    padding: 1.25rem 0;
+    padding: 5rem 0 5rem 0;
     text-align: center;
     font-size: 0.875rem;
   }
@@ -285,7 +359,7 @@ ul {
     }
 }
 
-@media(max-width: 880px) {
+@media(max-width: 750px) {
 
     .nav-container {
         flex-direction: row; 
@@ -345,12 +419,11 @@ ul {
 
     .image-section {
         padding: 1rem;
-        
     }
 
     .image-section img {
         padding: 1rem;
-        border-radius: 20px;
+        border-radius: 40px;
     }
 
 
