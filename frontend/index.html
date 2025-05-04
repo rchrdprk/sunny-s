@@ -14,7 +14,9 @@
     <header id="header">
         <div class="nav-container">
             <div class="logo">
-                <img src="logo.svg" alt="Sunny's" width="150" height="80">
+                <a href="./">
+                    <img src="logo.svg" alt="Sunny's" width="150" height="80">
+                </a>
             </div>
             <button id="open-sidebar" class="hamburger" onclick="openSidebar()">
                 <img src="burger_menu.svg" style="width: 30px; height: 30px;">
@@ -38,7 +40,7 @@
     </header>
 <!-- NAVIGATION BAR -->
 
-    <div id="overlay"></div>
+    <div id="overlay" onclick="closeSidebar()"></div>
 
     <section>
         <div class="main-image">
@@ -63,9 +65,10 @@
 
             <div id="menu" class="menu" >
                 <h1 class="menu-heading">MENU</h1>
+                <p class="find-pdf">Find the PDF version <a href="menu.pdf" target="_blank" rel="noopener noreferrer">HERE</a></p>
                 <ul class="menu-types">
                     <li>
-                        <a id="menu-breakfast" column-count=1>BREAKFAST</a>
+                        <a id="menu-breakfast" column-count=1 class="menu-types-active">BREAKFAST</a>
                     </li>
                     <li>
                         <a id="menu-tacos" column-count=1>TACOS</a>
@@ -86,9 +89,9 @@
             </div>              
 
             <div class="menu-content" id="menu-content">
-                <div id="breakfast" class="menu-section active">
+                <div id="breakfast" class="menu-section active" desc="Add Bacon (3 slices) $6 / Hash Brown $3.95">
                 </div>
-                <div id="tacos" class="menu-section" desc="Single $12 / Two $20">
+                <div id="tacos" class="menu-section" desc="Single $12 / Two (comes with coleslaw) $20&lt;br&gt;(Soft or Crunchy Tortillas)&lt;br&gt;Add Avocado $3">
                 </div>
                 <div id="quesadilla" class="menu-section" desc="Add any taco protein $6">
                 </div>
@@ -115,11 +118,13 @@
             <h1 class="time-heading">HOURS</h1>
             <ul class="hours">
                 <li>Sunday: CLOSED</li>
-                <li>Monday: 10:30 AM - 4:00 PM</li>
-                <li>Tuesday: 10:30 AM - 4:00 PM</li>
-                <li>Wednesday: 10:30 AM - 4:00 PM</li>
-                <li>Thursday: 10:30 AM - 4:00 PM</li>
-                <li>Friday: 10:30 AM - 4:00 PM</li>
+                <strong>
+                    <li>Monday: 10:30 AM - 4:00 PM</li>
+                    <li>Tuesday: 10:30 AM - 4:00 PM</li>
+                    <li>Wednesday: 10:30 AM - 4:00 PM</li>
+                    <li>Thursday: 10:30 AM - 4:00 PM</li>
+                    <li>Friday: 10:30 AM - 4:00 PM</li>
+                </strong>
                 <li>Saturday: CLOSED</li>
               </ul>
          </div>
@@ -127,8 +132,7 @@
 
     <section>
         <div id="contact" class="contact">
-           <!-- <h3><a href="tel:+">add-phone-number</a></h3>  -->
-           <h3><a>add-phone-number</a></h3> 
+           <h3><a href="tel:+250">250-909-3226</a></h3> 
         </div>
     </section>
 
@@ -137,7 +141,7 @@
             <div class="address">
                 <div class="address-container">
                     <h1>LOCATION</h1>
-                    <p>221 W 2nd Ave, Qualicum Beach</p>
+                    <p>221 W 2nd Ave, Qualicum Beach, BC</p>
                 </div>
             </div>
             <div class="map">
@@ -159,7 +163,30 @@
 
 
     <div id="footer" class="footer">
-        
+        <div class="footer-container"> 
+            <div class="addr-phone-hours">
+                <p>
+                    221 W 2nd Ave, Qualicum Beach, BC
+                    <br>
+                    <a href="tel:+250">250-909-3226</a>
+                </p>
+                <p class=footer-hours>
+                    <strong>MON - FRI</strong>
+                    <br>
+                    10:30am - 4:00pm
+                </p>
+            </div>
+            <div class="socials">
+                <a href="https://facebook.com" class="facebook-icon" target="_blank" rel="noopener noreferrer"></a>
+                <a href="https://instagram.com" class="instagram-icon" target="_blank" rel="noopener noreferrer"></a>
+            </div>
+            <div class="footer-logo">
+                <img src="images/logo_v2.png" style="width: 272.6px; height: 123px;">
+            </div>
+        </div>
+        <p class="copyright"> 
+            <script>document.write(new Date().getFullYear());</script> Sunny's Food and Drinks.
+        </p>
     </div>
 
 </body>

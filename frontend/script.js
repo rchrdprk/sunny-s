@@ -49,6 +49,8 @@ document.querySelectorAll('.menu-types a').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault(); 
 
+        document.querySelectorAll('.menu-types a').forEach(l => l.classList.remove('menu-types-active'));
+        this.classList.add('menu-types-active');
 
         const menuType = this.id.replace('menu-', '');
 
@@ -142,14 +144,26 @@ window.addEventListener('mousedown', e => {
 
 
 const navbar = document.getElementById('nav-items');
+const overlay = document.getElementById("overlay");
 
 function openSidebar(){
     navbar.classList.add('active');
+    document.getElementById("overlay").classList.add("active");
+    // overlay.style.display = "block";
 }
 
 function closeSidebar(){
     navbar.classList.remove('active');
+    overlay.classList.remove("active");
+
+    // overlay.addEventListener("transitionend", function handler(e) {
+    //     if (!overlay.classList.contains("active")) {
+    //         overlay.style.display = "none";
+    //     }
+    //     overlay.removeEventListener("transitionend", handler);
+    // });
 }
+
 
 
 //menu stuff
@@ -200,16 +214,10 @@ function renderMenu(data, menuType, menuTab, haveTitle, columnNum) {
         return;
     }
 
-    
-
     // section.innerHTML = ''; this clears the section
 
     const targetColumn = section.querySelector(`.menu-column-${columnNum}`);
     const target = targetColumn || section; // fallback to section if not found 
-
-    
-    
-
 
     if (haveTitle) {
         const menuTitleHtml = `<h1 class="menu-type">${menuType.toUpperCase()}</h1>`
@@ -253,11 +261,10 @@ function addSectionContainers() {
 
         const desc = section.getAttribute('desc');
         if (desc) {
-            const desc = section.getAttribute("desc");
 
             const descDiv = document.createElement('h3');
                 descDiv.classList.add('menu-section-description');
-                descDiv.textContent = desc;
+                descDiv.innerHTML = desc;
                 section.prepend(descDiv);
         }
     });
@@ -290,5 +297,18 @@ const mainImage = document.querySelector(".main-image");
 mainImage.style.paddingTop = `${headerHeight}px`;
 
 
+//img stuff
+document.addEventListener('contextmenu', function (e) {
+    if (e.target.tagName === 'IMG') {
+      e.preventDefault();
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      img.setAttribute('draggable', 'false');
+    });
+  });
 
 

@@ -21,11 +21,11 @@ button {
     cursor: pointer;
 }
 
-header {
+#header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 6;
     transition: top 0.2s ease-in-out;
 }
 
@@ -66,18 +66,16 @@ ul {
     color: #F58220;
 }
 
-#overlay {
-
-}
-
 .main-image {
-    display: flex;
-    justify-content: center;
+    overflow: hidden;
 }
 
 .main-image img {
     width: auto;
     max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+  
 }
 
 .about {
@@ -127,7 +125,16 @@ ul {
 
 .menu-heading {
     font-size: 2rem;
-    padding: 1rem 0 2.5rem 0;
+    padding: 1rem 0 1.5rem 0;
+}
+
+.find-pdf {
+    padding: 0 0 3rem 0;
+}
+
+.find-pdf a{
+    font-weight: 800;
+    color:#F58220;
 }
 
 .menu-types {
@@ -159,6 +166,11 @@ ul {
     color: #FDD24F;
 }
 
+.menu-types-active {
+    background-color: #F58220;
+    color: #FDD24F !important;
+}
+
 .menu-content {
     display: flex;
     flex-wrap: wrap;
@@ -182,6 +194,8 @@ ul {
 
 .menu-section-description {
     padding: 0 0 3rem 0;
+    text-align: center;
+    line-height: 1.5;
 }
 
 .menu-section-container {
@@ -309,7 +323,7 @@ ul {
 }
 
 .map-buttons li{
-    padding: 0 0.625rem 2.5rem 0.625rem;
+    padding: 0 0.625rem 5rem 0.625rem;
     font-weight: 800;
     font-size: 0.95rem
 }
@@ -331,11 +345,78 @@ ul {
 
 .footer {
     background-color: #F58220;
-    color: #fff;
-    padding: 5rem 0 5rem 0;
+    color: #FFFFCC;
+    padding: 2rem 0 1rem 0;
     text-align: center;
     font-size: 0.875rem;
-  }
+}
+
+.footer-container {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0 1.5rem 0 1.5rem;
+}
+
+.footer-container > div:not(.socials) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.addr-phone-hours p {
+    padding-bottom: 1rem; 
+}
+
+.addr-phone-hours a {
+    color: #FFFFCC;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.socials a {
+    margin: 0.5rem;
+}
+
+.facebook-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url('images/facebook.svg');
+    background-size: cover;
+}
+
+.facebook-icon:hover {
+    background-image: url('images/facebook-hover.svg');
+}
+
+.instagram-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url('images/instagram.svg');
+    background-size: cover;
+}
+
+.instagram-icon:hover {
+    background-image: url('images/instagram-hover.svg');
+}
+
+.footer-logo {
+    padding: 0;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    padding: 3rem 0 0rem 0;
+}
 
 .hamburger {
     display: none;
@@ -349,23 +430,38 @@ ul {
     margin-left: auto;
 }
 
+#overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
 @media(min-width: 1800px) {
     .nav-container {
         flex-direction: column; 
     }
-
     .logo {
         padding-bottom: 10px;
     }
+
 }
 
 @media(max-width: 750px) {
+    #open-sidebar, #close-sidebar {
+        display: block;
+    }
 
     .nav-container {
         flex-direction: row; 
     }
 
     .nav-items {
+        position: fixed;
         flex-direction: column;
         position: fixed;
         top: 0;
@@ -374,6 +470,7 @@ ul {
         height: 100%;
         background-color: lightblue;
         padding-top: 1rem;
+        position: fixed;
         transition: right 0.2s ease-in-out;
     }
 
@@ -384,6 +481,13 @@ ul {
 
     .nav-items.active {
         right: 0;
+    }
+
+    #overlay.active {
+        opacity: 0.5; 
+        visibility: visible;
+        pointer-events: auto;
+        z-index: 9;
     }
     
     .hamburger {
@@ -400,6 +504,30 @@ ul {
 
     .image-section img {
         max-width: 100%;
+    }
+
+    .main-image img {
+        height: 100vh;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-logo {
+        padding: 0 0 3.5rem 0;
+        order: -1;
+    }
+
+    .socials {
+        padding: 0 0 3.2rem 0;
+        justify-content: center;
+    }
+
+    .addr-phone-hours {
+        padding: 0 0 1rem 0;
+        order: 1;
     }
 
 }
