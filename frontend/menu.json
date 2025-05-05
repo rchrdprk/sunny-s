@@ -3,7 +3,7 @@
     "breakfast": [
       {
         "name": "Sunny Wrap",
-        "description": "Scrambled eggs, cheese, avocado, red pepper, hashbrowns",
+        "description": "Scrambled eggs, cheese, avocado, pepper, hashbrowns",
         "price": "12.75",
         "extra_info": ""
       },
@@ -41,13 +41,7 @@
       },
       {
         "name": "Korean Beef",
-        "description": "Marinated sliced beef, onion, carrot, green onions, red pepper, cabbage, (sesame oil + garlic)",
-        "price": "",
-        "extra_info": ""
-      },
-      {
-        "name": "Prawn",
-        "description": "Sauteed prawns, garlic, mango salsa, cabbage, lime juice",
+        "description": "Marinated sliced beef, onion, carrot, green onions, pepper, cabbage, (sesame oil + garlic)",
         "price": "",
         "extra_info": ""
       }
@@ -56,7 +50,7 @@
       {
         "name": "Quesadilla",
         "description": "red pepper, purple onions, black beans, cheese (comes with coleslaw)",
-        "price": "15.95",
+        "price": "13.95",
         "extra_info": ""
       }
     ],
@@ -84,19 +78,19 @@
         {
           "name": "Iced Tea",
           "description": "",
-          "price": "3.95",
+          "price": "2.95",
           "extra_info": ""
         },
         {
             "name": "Pop",
             "description": "",
-            "price": "3.95",
+            "price": "2.95",
             "extra_info": ""
         },
         {
             "name": "Water",
             "description": "",
-            "price": "3.95",
+            "price": "2.95",
             "extra_info": ""
         }
     ],
@@ -136,10 +130,16 @@
     ],
     "domestic": [
         {
-            "name": "LUCKY",
+            "name": "Lucky",
             "description": "",
             "price": "6",
             "extra_info": ""
+        },
+        {
+          "name": "Canadian",
+          "description": "",
+          "price": "6",
+          "extra_info": ""
         }
     ],
     "international": [
