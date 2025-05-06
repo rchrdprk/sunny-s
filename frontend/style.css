@@ -5,16 +5,21 @@
 
 }
 
-:root {
+/* :root {
     overscroll-behavior: none;
-}
+} */
 
 :root {
     --map-tiles-filter: sepia(0.6) brightness(95%) contrast(90%);
 }
+
   
 #map .leaflet-tile {
 filter: var(--map-tiles-filter);
+}
+
+#map {
+    z-index: 0;
 }
 
 html {
@@ -55,7 +60,7 @@ ul {
     background-color: #FDD24F;
     /* font-weight: 700;
     font-size: 1rem; */
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
 }
 
 .logo {
@@ -494,7 +499,7 @@ ul {
         right: -100%;
         width: 75%;
         height: 100%;
-        background-color: lightblue;
+        background-color: #FDD24F;
         padding-top: 1rem;
         position: fixed;
         transition: right 0.2s ease-in-out;
@@ -508,11 +513,6 @@ ul {
     .nav-items.active {
         right: 0;
     }
-/* 
-    .mobile-nav-container {
-        position: fixed;
-        z-index: 10;
-    } */
 
     #overlay.active {
         position: fixed;
