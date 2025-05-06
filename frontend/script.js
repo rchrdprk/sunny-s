@@ -1,18 +1,19 @@
-(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
-    // key: 
-    v: "weekly",
-    // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
-    // Add other bootstrap parameters as needed, using camel case.
-  });
 
+const map = L.map('map').setView([49.347298, -124.44812], 18); // Initial coordinates and zoom level
 
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
-// (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://google-maps-api.richardpark263.workers.dev/?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
-//     // key: 
-//     v: "weekly",
-//     // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
-//     // Add other bootstrap parameters as needed, using camel case.
-//   });
+const customIcon = L.icon({
+    iconUrl: document.getElementById('customMarker').src,
+    iconSize: [64, 64],
+    iconAnchor: [32, 64],
+    popupAnchor: [0, -75]
+});
+  
+L.marker([49.347310, -124.44808], { icon: customIcon }).addTo(map)
+
 
 async function initMap() {
     const { Map } = await google.maps.importLibrary("maps");
@@ -79,17 +80,17 @@ const headerHeight = header.offsetHeight;
 const navContainer = document.getElementById('nav-container');
 const navHeight = navContainer.offsetHeight;
 const mainImage = document.querySelector(".main-image");
+mainImage.style.marginTop = `${navHeight}px`;
 
 
 window.addEventListener("scroll", () => {
+
     const scrollTop = window.scrollY || document.documentElement.scrollTop; 
 
     if (scrollTop <= headerHeight) {
-        header.style.position = "relative";
         mainImage.style.paddingTop = `0`;
     } else {
-        header.style.position = "fixed";
-        mainImage.style.paddingTop = `${navHeight}px`;
+        
         if (scrollTop < prevScrollTop && userInitiatedScroll == true) { //if user is scrolling up manually
             header.style.top = "0";
         } else if (scrollTop < prevScrollTop && userInitiatedScroll == false) { //if user is scrolling up 

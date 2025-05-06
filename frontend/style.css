@@ -5,15 +5,23 @@
 
 }
 
+:root {
+    overscroll-behavior: none;
+}
+
+:root {
+    --map-tiles-filter: sepia(0.6) brightness(95%) contrast(90%);
+}
+  
+#map .leaflet-tile {
+filter: var(--map-tiles-filter);
+}
+
 html {
     scroll-behavior: smooth;
     background-color: #FDD24F;
     font-family: 'Figtree', sans-serif;
     font-size: 16px;
-}
-
-body {
-    overscroll-behavior: none;
 }
 
 a, a:visited {
@@ -26,7 +34,7 @@ button {
 }
 
 #header {
-    /* position: fixed; */
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 8;
@@ -86,8 +94,8 @@ ul {
 }
 
 .main-image img {
-    width: auto;
-    max-width: 100%;
+    width: 100vw;
+    height:auto;
     object-fit: cover;
     object-position: center;
   
@@ -261,6 +269,7 @@ ul {
     width: 100%;
     padding: 2rem;
 }
+
 
 .image-section img{
     padding: 2rem;
@@ -580,6 +589,7 @@ ul {
     .image-section img {
         padding: 1rem;
         border-radius: 40px;
+        margin: 1rem 0 2rem 0;
     }
 
 
