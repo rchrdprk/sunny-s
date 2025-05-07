@@ -15,37 +15,6 @@ const customIcon = L.icon({
 L.marker([49.347310, -124.44808], { icon: customIcon }).addTo(map)
 
 
-async function initMap() {
-    const { Map } = await google.maps.importLibrary("maps");
-    const { Marker } = await google.maps.importLibrary("marker");
-
-    const position = { lat: 49.347298, lng: -124.44812 }
-
-    const map = new Map(document.getElementById("map"), {
-        center: position, 
-        zoom: 17.5,
-        mapTypeControl: false,
-        streetViewControl: false, 
-        zoomControl: true,
-        scrollwheel: false,
-    });
-
-    const icon = document.getElementById("customMarker").cloneNode(true);
-
-    const marker = new Marker({
-        map: map,
-        position: position,
-        title: "Sunny's Food & Drinks",
-        icon: {
-            url: icon.src,
-            scaledSize: new google.maps.Size(70, 70),
-        },
-    });
-  }
-
-initMap();
-
-
 document.querySelectorAll('.menu-types a').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault(); 
@@ -81,7 +50,6 @@ const navContainer = document.getElementById('nav-container');
 const navHeight = navContainer.offsetHeight;
 const mainImage = document.querySelector(".main-image");
 mainImage.style.marginTop = `${navHeight}px`;
-
 
 window.addEventListener("scroll", () => {
 
@@ -250,7 +218,6 @@ window.addEventListener('resize', function () {
 
 
 //menu stuff
-
 function menu() {
 
     addSectionContainers()
@@ -278,7 +245,6 @@ function menu() {
             console.error(err);
         });
 }
-
 
 
 //rendermenu -> data, menuType: the header, menuTab: the tab this part will go in, 
@@ -375,9 +341,6 @@ function createColumn() {
 
 
 menu()
-
-
-
 
 
 //img stuff
