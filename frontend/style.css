@@ -530,7 +530,7 @@ ul {
         background-color: #FDD24F;
         padding-top: 1rem;
         position: fixed;
-        transition: right 0.2s ease-in-out;
+        transition: right 0.1s ease-in-out;
     }
 
     .nav-items li {
