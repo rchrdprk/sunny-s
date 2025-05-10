@@ -87,6 +87,10 @@ ul {
 }
 
 .main-image {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
     overflow: hidden;
 }
 
@@ -95,7 +99,27 @@ ul {
     height:auto;
     object-fit: cover;
     object-position: center;
-  
+}
+
+.image-overlay a{
+    position: absolute;
+    text-decoration: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: #FDD24F;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-align: center;
+    border: 3px solid #FDD24F;
+}
+
+.image-overlay a:hover {
+    border-color: #FDD24F;
+    background-color: #FDD24F;
+    color:black;
+    cursor: pointer;
 }
 
 .about {
@@ -103,6 +127,7 @@ ul {
     flex-wrap: wrap;
     justify-content: center;
     padding: 5rem 3rem 3rem 3rem;
+    margin: 8rem 0 8rem 0;
     gap: 2rem; 
 }
 
@@ -126,6 +151,12 @@ ul {
     display: flex;
     align-items: center;
     padding: 4rem;
+}
+
+.about-par-container p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4; 
 }
 
 
@@ -172,7 +203,7 @@ ul {
 .menu-types li a{
     cursor: pointer;
     padding: 0.5rem;
-    border: 0.1rem solid black;
+    border: 1px solid black;
     color: black;
 
     transition: all 0.2s ease;
@@ -259,12 +290,14 @@ ul {
     flex-wrap: wrap;
     width: 100%;
     padding: 2rem;
+    margin: 4rem 0 4rem 0;
 }
 
 
 .image-section img{
-    padding: 2rem;
-    max-width:50%;
+    padding: 4rem;
+    max-width:45%;
+    
 }
 
 .time {
@@ -299,6 +332,7 @@ ul {
     justify-content: center;
     align-items: center;
     padding: 1.875rem 0;
+    margin: 0 0 4rem 0;
     font-size: 1rem;
 }
 
@@ -462,6 +496,17 @@ ul {
     .logo {
         padding-bottom: 10px;
     }
+    
+    .about-par-container {
+        padding: 4rem 8rem 4rem 8rem;
+    }
+
+}
+
+@media(max-width: 1000px) {
+    .image-section img {
+        max-width: 100%;
+    }
 
 }
 
@@ -518,10 +563,7 @@ ul {
         padding: 2rem;
     }
 
-    .image-section img {
-        max-width: 100%;
-    }
-
+   
     .main-image img {
         height: 100vh;
     }
@@ -560,10 +602,19 @@ ul {
 
     .about {
         padding: 5rem 2rem 3rem 2rem;
+        margin-bottom: 3.5rem;
     }
 
     .about-image img{
         border-radius: 20px;
+    }
+
+    .about-par-container {
+        padding: 4rem 1rem 4rem 1rem;
+    }
+
+    .about-par-container p {
+        text-align: center;
     }
 
     .image-section {
