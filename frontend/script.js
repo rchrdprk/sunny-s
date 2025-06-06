@@ -226,11 +226,13 @@ function menu() {
     fetch('menu.json')
         .then(response => response.json())
         .then(data => {
-            renderMenu(data.menu.breakfast, 'breakfast', 'breakfast',false, 1);
             renderMenu(data.menu.tacos, 'tacos', 'tacos', false, 1);
-            renderMenu(data.menu.quesadilla, 'quesadilla', 'quesadilla', false, 1);
-            renderMenu(data.menu.kids_menu, 'kids','kids', false, 1);
-            renderMenu(data.menu.beverages, 'beverages','beverages', false, 1);
+
+            //bevs
+            renderMenu(data.menu.milk_tea, 'milk tea','beverages', false, 1);
+            renderMenu(data.menu.fruity_smoothies, 'fruity smoothies','beverages', true, 1);
+            renderMenu(data.menu.milky_smoothies, 'milky smoothies','beverages', true, 1);  
+            renderMenu(data.menu.drinks, 'drinks','beverages', true, 1);  
 
             //alchohol
             renderMenu(data.menu.alcohol, 'alcohol','alcohol', false, 1);
