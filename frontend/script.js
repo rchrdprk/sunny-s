@@ -229,10 +229,13 @@ function menu() {
             renderMenu(data.menu.tacos, 'tacos', 'tacos', false, 1);
 
             //bevs
-            renderMenu(data.menu.milk_tea, 'milk tea','beverages', false, 1);
             renderMenu(data.menu.fruity_smoothies, 'fruity smoothies','beverages', true, 1);
             renderMenu(data.menu.milky_smoothies, 'milky smoothies','beverages', true, 1);  
+            renderMenu(data.menu.toppings, 'toppings ( $1 )','beverages', true, 1);
             renderMenu(data.menu.drinks, 'drinks','beverages', true, 1);  
+
+            //sides
+            renderMenu(data.menu.sides, 'sides', 'sides', false, 1);
 
             //alchohol
             renderMenu(data.menu.alcohol, 'alcohol','alcohol', false, 1);

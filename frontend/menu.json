@@ -144,14 +144,70 @@
             "description": "",
             "price": "6",
             "extra_info": ""
+        },
+        {
+            "name": "Cookies & Cream",
+            "description": "",
+            "price": "6.50",
+            "extra_info": ""
+        },
+        {
+            "name": "Taro Oreo",
+            "description": "",
+            "price": "7",
+            "extra_info": ""
+        },
+        {
+            "name": "Avo Milk",
+            "description": "",
+            "price": "7",
+            "extra_info": ""
         }
     ],
-    "milk_tea": [
+    "toppings": [
         {
-          "name": "Milk Tea",
+          "name": "Cocount Jelly",
           "description": "",
-          "price": "6",
+          "price": "",
           "extra_info": ""
+        },
+        {
+          "name": "Tapioca Pearls",
+          "description": "",
+          "price": "",
+          "extra_info": ""
+        },
+        {
+          "name": "Mango Jelly",
+          "description": "",
+          "price": "",
+          "extra_info": ""
+        },
+        {
+          "name": "Blueberry Popping Pearls",
+          "description": "",
+          "price": "",
+          "extra_info": ""
+        },
+        {
+          "name": "Yogurt Popping Pearls",
+          "description": "",
+          "price": "",
+          "extra_info": ""
+        }
+    ],
+    "sides": [
+        {
+            "name": "Vege Spring Rolls",
+            "description": "6pc",
+            "price": "5.95",
+            "extra_info": ""
+        },
+        {
+            "name": "Pork Dumplings",
+            "description": "5pc",
+            "price": "7.50",
+            "extra_info": ""
         }
     ],
     "wine": [
